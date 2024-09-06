@@ -1,40 +1,40 @@
 ## IFMS
 
-#### Curso Técnico em Informárica - 6° Período - Matutino
+#### Technical Course in Computer Science - 6th Period - Morning Class
 
-#### Professor Vinícius Maeda - Aluno João Flores
+#### Teacher: Vinícius Maeda - Student: João Flores
 
-#### Anotações, Códigos e Programas da disciplina Linguagem de Programação 4
+#### Anotations, Codes and Programs for Programming Language 4 discipline
 
 ---
 
-### Comandos básicos de terminal
+### Basics commands in Terminal
 
-Lista o coteúdo de um diretório (pasta)
+List the content of a diretory (file)
 
 ```
 dir
 ```
 
-Criar um novo diretório
+Create a new diretory
 
 ```
-mkdir <nome-da-pasta>
+mkdir <file-name>
 ```
 
-Remover um diretório
+Remove an existing diretory
 
 ```
-rmdir <nome-da-pasta>
+rmdir <file-name>
 ```
 
-Acessar uma pasta
+Acess a file
 
 ```
-cd <nome-da-pasta>
+cd <file-name>
 ```
 
-Limpar terminal
+Cleans terminal
 
 ```
 cls
@@ -42,14 +42,28 @@ cls
 
 ---
 
-### Comandos para criar um repositório no Github pelo terminal
+### Commands to create a Github repository using Terminal
 
 
 
 ---
 
-### Comandos para atualizar arquivos de um repositório pelo terminal
+### Commands to update files in a Github repository
 
+Add all files to upload to Github resository
 
+```
+git add .
+```
 
----
+Create a message to describe changes
+
+```
+git commit -m "message-to-add"
+```
+
+Push all files to Github repository
+
+```
+git push -u
+```
