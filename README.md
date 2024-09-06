@@ -67,3 +67,9 @@ Push all files to Github repository
 ```
 git push -u
 ```
+
+Verifying if everything is in order
+
+```
+git status
+```
