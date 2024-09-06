@@ -34,6 +34,12 @@ Acessar uma pasta
 cd <nome-da-pasta>
 ```
 
+Limpar terminal
+
+```
+cls
+```
+
 ---
 
 ### Comandos para criar um repositório no Github pelo terminal
