@@ -44,7 +44,53 @@ cls
 
 ### Commands to create a Github repository using Terminal
 
+Initiate the versioning
 
+```
+git init
+```
+
+Verify the project situation 
+
+```
+git status 
+```
+
+Add all untracked files
+
+```
+git add . 
+```
+
+add README markdown file
+
+```
+git add README.md
+```
+
+Executes a commit (update) with message
+
+```
+git commit -m "message"
+```
+
+Link the project to the main branch
+
+```
+git branch -M main
+```
+
+Executes a remote link to a GitHub repository
+
+```
+git remote add origin <repository-url>
+```
+
+Push all files to the main branch in repository
+
+```
+git push -u origin main
+```
 
 ---
 
