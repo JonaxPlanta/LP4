@@ -40,6 +40,18 @@ Cleans terminal
 cls
 ```
 
+Exit the file, returning one level
+
+```
+cd ..
+```
+
+Exit the file, returning to C: file
+
+```
+cd /
+```
+
 ---
 
 ### Commands to create a Github repository using Terminal
@@ -68,19 +80,19 @@ Add README markdown file
 git add README.md
 ```
 
-Executes a commit (update) with message
+Execute a commit (update) with message
 
 ```
 git commit -m "message"
 ```
 
-Links the project to the main branch
+Link the project to the main branch
 
 ```
 git branch -M main
 ```
 
-Executes a remote link to a GitHub repository
+Execute a remote link to a GitHub repository
 
 ```
 git remote add origin <repository-url>
@@ -118,4 +130,20 @@ Verifying if everything is in order
 
 ```
 git status
+```
+
+---
+
+#### Comands to initiate a project using NodeJS
+
+Initiate a project by providing data manually
+
+```
+npm init
+```
+
+Initiate a project using default data
+
+```
+npm init -y
 ```
