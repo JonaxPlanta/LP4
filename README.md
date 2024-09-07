@@ -134,7 +134,7 @@ git status
 
 ---
 
-#### Comands to initiate a project using NodeJS
+### Comands to initiate a project using NodeJS
 
 Initiate a project by providing data manually
 
