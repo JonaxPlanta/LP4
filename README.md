@@ -62,7 +62,7 @@ Add all untracked files
 git add . 
 ```
 
-add README markdown file
+Add README markdown file
 
 ```
 git add README.md
@@ -74,7 +74,7 @@ Executes a commit (update) with message
 git commit -m "message"
 ```
 
-Link the project to the main branch
+Links the project to the main branch
 
 ```
 git branch -M main
