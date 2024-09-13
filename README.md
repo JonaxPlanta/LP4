@@ -134,7 +134,7 @@ git status
 
 ---
 
-### Comands to initiate a project using NodeJS
+### Commands to initiate a project using NodeJS
 
 Initiate a project by providing data manually
 
@@ -147,3 +147,24 @@ Initiate a project using default data
 ```
 npm init -y
 ```
+
+### Commands to install Node dependences
+
+Express
+
+```
+npm install express
+```
+
+Nodemon
+
+```
+npm install -g nodemon
+```
+
+Nodemon Dev
+
+```
+npm install --save-dev nodemon
+```
+
