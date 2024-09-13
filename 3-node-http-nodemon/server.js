@@ -1,40 +1,42 @@
-// Importando o módulo HTTP da biblioteca HTTP
+// Importing the HTTP module from HTTP library 
 const http = require("http");
+
+// Importing the URL module from URL library 
 const url = require("url");
 
-// Criando localhost com ip do próprio computador
+// Creating a 'localhost' with the IP address from self machine
 const hostname = '127.0.0.1'
-// Criando porta para selecionar uma porta do computador
+// Creating an access port to select which computer port the server will run on
 const port = 3000;
 
-// Função anônima para criar servidor da biblioteca http
-// Os parâmetros requisição (quando o usuário faz uma requisição) e
-// resposta (quando o servidor está dando uma resposta ao) são padrâo
+// Anonymous function to create a server from HTTP library
+// The parameters require (when the user makes a require to the server) and
+// response (when the server makes a response to the user) are default
 const server = http.createServer((require, response) => {
-    // Instruções para o navegador (statusCode e setHeader)
-    // Código de status tem que ser igual a 200 para estar tudo certo
+    // Instructions to browser (statusCode and setHeader)
+    // Status code must be equal 200 for everything to be fine
     response.statusCode = 200;
-    // Configurando o cabeçalho da página (tipo de conteúdo, texto do tipo plano e utf-8 para mapa de caracteres)
+    // Setting the page header (content type: plan type text and utf-8 character types)
     response.setHeader('Content-Type', 'text/plan; charset=utf-8');
 
-    // Criando uma variável para consultar a string da URL
-    let q = url.parse(require.url, true).query;
+    // Creating a variable to query the URL string 
+    let urlQuery = url.parse(require.url, true).query;
+    // creating a function to executes a sum operation
+    // Access the following URL and change the "[...]" to a number: 
+    // http://127.0.0.1:3000/?operatorNumber=[...]&toOperateNumber=[...]
+    let operatorNumber = Number(urlQuery.operatorNumber);
+    let toOperateNumber = Number(urlQuery.toOperateNumber);
+    let sumString = () => `SUM: ${operatorNumber} + ${toOperateNumber} = ${operatorNumber + toOperateNumber}`;
+    // Writing in code the result of the sum function
+    response.write(sumString());
 
-    // criando uma operação de soma
-    // Acesse: http://127.0.0.1:3000/?numeroUm=[...]&numeroDois=[...]
-    let numero1 = Number(q.numero1);
-    let numero2 = Number(q.numero2);
-    let soma = `SOMA: ${numero1} + ${numero2} = ${numero1 + numero2}`;
-
-    response.write(soma);
-
-    // Terminando resposta do servidor
+    // Ending the server response
     response.end();
 });
 
-// Executar o servidor (criando uma escuta, uma espera para alguém que entrar no endereço 'localhost')
-// com parâmetros porta de acesso do servidor, endereço IP do servidor e mensagem para o terminal
-server.listen(port, hostname, console.log('O servidor está rodando...'));
+// Runs the server (creates a listen, a wait anyone who wants to enter the server address)
+// with parameterss: server access port, server IP address and a message in terminal
+server.listen(port, hostname, console.log('The server is running...'));
 
-// "npm run dev" para rodar
-// "ctrl + c" para fechar, "y" para confirmar
+// "npm run dev" to run the server
+// "ctrl + c" to stop the server and "y" to confirm
