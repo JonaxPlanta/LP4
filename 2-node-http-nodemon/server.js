@@ -23,3 +23,6 @@ const server = http.createServer((require, respost) => {
 // Executar o servidor (criando uma escuta, uma espera para alguém que entrar no endereço 'localhost')
 // com parâmetros porta de acesso do servidor, endereço IP do servidor e mensagem para o terminal
 server.listen(port, hostname, console.log('O servidor está rodando...'));
+
+// "npm run dev" para rodar
+// "ctrl + c" para fechar, "y" para confirmar
