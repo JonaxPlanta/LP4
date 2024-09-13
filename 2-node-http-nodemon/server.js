@@ -1,5 +1,6 @@
 // Importando o módulo HTTP da biblioteca HTTP
 const http = require("http");
+const url = require("url");
 
 // Criando localhost com ip do próprio computador
 const hostname = '127.0.0.1'
@@ -9,15 +10,26 @@ const port = 3000;
 // Função anônima para criar servidor da biblioteca http
 // Os parâmetros requisição (quando o usuário faz uma requisição) e
 // resposta (quando o servidor está dando uma resposta ao) são padrâo
-const server = http.createServer((require, respost) => {
+const server = http.createServer((require, response) => {
+    // Instruções para o navegador (statusCode e setHeader)
     // Código de status tem que ser igual a 200 para estar tudo certo
-    respost.statusCode = 200;
+    response.statusCode = 200;
     // Configurando o cabeçalho da página (tipo de conteúdo, texto do tipo plano e utf-8 para mapa de caracteres)
-    respost.setHeader('Content-Type', 'text/plan; charset=utf-8');
-    // Escreve uma frase no servidor, na página
-    respost.write('Olá! Este é um servidor HTTP.');
+    response.setHeader('Content-Type', 'text/plan; charset=utf-8');
+
+    // Criando uma variável para consultar a string da URL
+    let q = url.parse(require.url, true).query;
+
+    // criando uma operação de soma
+    // Acesse: http://127.0.0.1:3000/?numeroUm=[...]&numeroDois=[...]
+    let numero1 = Number(q.numero1);
+    let numero2 = Number(q.numero2);
+    let soma = `SOMA: ${numero1} + ${numero2} = ${numero1 + numero2}`;
+
+    response.write(soma);
+
     // Terminando resposta do servidor
-    respost.end();
+    response.end();
 });
 
 // Executar o servidor (criando uma escuta, uma espera para alguém que entrar no endereço 'localhost')
