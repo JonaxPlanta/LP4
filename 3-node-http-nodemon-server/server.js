@@ -21,14 +21,14 @@ const server = http.createServer((require, response) => {
 
     // Creating a variable to query the URL string 
     let urlQuery = url.parse(require.url, true).query;
-    // creating a function to executes a sum operation
-    // Access the following URL and change the "[...]" to a number: 
-    // http://127.0.0.1:3000/?operatorNumber=[...]&toOperateNumber=[...]
-    let operatorNumber = Number(urlQuery.operatorNumber);
-    let toOperateNumber = Number(urlQuery.toOperateNumber);
-    let sumString = () => `SUM: ${operatorNumber} + ${toOperateNumber} = ${operatorNumber + toOperateNumber}`;
-    // Writing in code the result of the sum function
-    response.write(sumString());
+    // Creating the variables to executes a data processing
+    let name = String(urlQuery.name);
+    let surname = String(urlQuery.surname);
+    // Writing in code the result of data processing
+    response.write(`
+        Name: ${name}
+        Surname: ${surname}
+        `);
 
     // Ending the server response
     response.end();
@@ -39,4 +39,10 @@ const server = http.createServer((require, response) => {
 server.listen(port, hostname, console.log('The server is running...'));
 
 // "npm run dev" to run the server
+// Access the following URL and change the "[...]" to a name: 
+// http://127.0.0.1:3000/?name=[...]&surname=[...]
+
 // "ctrl + c" to stop the server and "y" to confirm
+
+// To change the code start and dev path, 
+// change the "start" and "dev" paths in "package.json" file
