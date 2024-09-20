@@ -38,4 +38,3 @@ const multiplier = (number1, number2) => {
 
 // calling function
 console.log(multiplier(2, 2));
-
