@@ -165,6 +165,6 @@ npm install -g nodemon
 Nodemon Dev
 
 ```
-npm install --save-dev nodemon
+npm install --save-dev
 ```
 
