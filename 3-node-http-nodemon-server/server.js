@@ -46,3 +46,7 @@ server.listen(port, hostname, console.log('The server is running...'));
 
 // To change the code start and dev path, 
 // change the "start" and "dev" paths in "package.json" file
+
+// or
+
+// "node --watch 'server.js'"
