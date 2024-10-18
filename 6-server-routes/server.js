@@ -9,20 +9,21 @@ const port = 3000;
 // Settings of server
 const server = http.createServer((require, response) => {
     // Settings of header
-    response.writeHead(200, { "Content-type" : "text/json; charset=utf-8" });
+    response.writeHead(200, { "Content-type" : "text/html; charset=utf-8" });
 
     // Requires URL from user 
     const url = require.url;
 
     // Manipulating URL
     if (url === "/") {
-        response.write("You are in the Website main root.") // Write a message
-        response.end(); // End the response
-    } 
-    {
-    response.write(`A URL é: "${url}".`); // Write a message
-    response.end(); // End the response
+        response.write(`URL: "${url}" \nYou are in the Website <b>main root.</b>`) // Write a message
+    } else if (url === "/about") {
+        response.write(`URL: "${url}" \nYou are in the Website <b>about root.</b>`) // Write a message
+    } else {
+        response.write(`URL: "${url}". \nThis page <b>doesn't</b> exist!`); // Write a message
     };
+
+    response.end(); // End the response
 });
 
 // Runs the server (creates a listen, a wait anyone who wants to enter the server address)
