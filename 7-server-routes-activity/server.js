@@ -76,10 +76,10 @@ const server = http.createServer((require, response) => {
     } else {
         // Settings of header
         response.writeHead(404, { "Content-type" : "text/plain; charset=utf-8" });
-        response.write(`URL: "${url}". \nThis page doesn't exist!`); // Write a message
-    }
 
-    response.end(); // End the response
+        response.write(`URL: "${url}". \nThis page doesn't exist!`); // Write a message
+        response.end(); // End the response
+    }
 });
 
 // Runs the server (creates a listen, a wait anyone who wants to enter the server address)
