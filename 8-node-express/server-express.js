@@ -10,16 +10,35 @@ const port = 3000;
 
 // Root route
 app.get('/', (request, response) => {
-    response.send("Hello, Welcome to Main Route!");
+    response.send("Hello! You are in Main Route!");
 });
 
+// Get - get data
 app.get('/client', (request, response) => {
-    response.send("Hello, Welcome to Client Route!");
+    response.send("Hello! You are in Client Route.");
 });
 
 app.get('/admin', (request, response) => {
-    response.send("Hello, Welcome to Admin Route!");
+    response.send("Welcome! You are in Admin Route.");
 });
+
+app.get('/kernel', (request, response) => {
+    response.send("Turn Back! You are in Kernel Route.");
+});
+
+// Other Methods
+// Post - insert data
+app.post('/post', (request, response) => {
+    response.send("Data inserted!")
+})
+// Put - update data
+app.put('/put', (request, response) => {
+    response.send("Data updated!")
+})
+// Delete - delete data
+app.delete('/delete', (request, response) => {
+    response.send("Data deleted!")
+})
 
 app.listen(port, hostname, () => {
     console.log(`The server is running! \nAccess: http://${hostname}:${port}/`);
