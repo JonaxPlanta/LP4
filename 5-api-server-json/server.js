@@ -8,7 +8,7 @@ const port = 3000;
 
 
 // Settings of server
-const server = http.createServer((require, response) => {
+const server = http.createServer((resquest, response) => {
     // JSon objects
     const person = {
         name : "Jason",
@@ -25,6 +25,8 @@ const server = http.createServer((require, response) => {
 
 // Runs the server (creates a listen, a wait anyone who wants to enter the server address)
 // with parameterss: server access port, server IP address and a message in terminal
-server.listen(port, hostname, console.log('The server is running...'));
+app.listen(port, hostname, () => {
+    console.log(`The server is running! \nAccess: http://${hostname}:${port}/`);
+});
 
 // "node --watch 'server.js'"

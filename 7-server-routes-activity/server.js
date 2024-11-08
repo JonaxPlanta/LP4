@@ -10,9 +10,9 @@ const hostname = '127.0.0.1'
 const port = 3000;
 
 // Settings of server
-const server = http.createServer((require, response) => {
-    // Requires URL from user 
-    const url = require.url;
+const server = http.createServer((request, response) => {
+    // resquests URL from user 
+    const url = request.url;
 
     /// JSon data
     const data = {
@@ -84,6 +84,8 @@ const server = http.createServer((require, response) => {
 
 // Runs the server (creates a listen, a wait anyone who wants to enter the server address)
 // with parameterss: server access port, server IP address and a message in terminal
-server.listen(port, hostname, console.log('The server is running...'));
+app.listen(port, hostname, () => {
+    console.log(`The server is running! \nAccess: http://${hostname}:${port}/`);
+});
 
 // "node --watch 'server.js'"

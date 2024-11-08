@@ -7,9 +7,9 @@ const hostname = '127.0.0.1'
 const port = 3000;
 
 // Anonymous function to create a server from HTTP library
-// The parameters require (when the user makes a require to the server) and
+// The parameters request (when the user makes a request to the server) and
 // response (when the server makes a response to the user) are default
-const server = http.createServer((require, response) => {
+const server = http.createServer((request, response) => {
     // Instructions to browser (statusCode and setHeader)
     // Status code must be equal 200 for everything to be fine
     response.statusCode = 200;
@@ -24,7 +24,9 @@ const server = http.createServer((require, response) => {
 
 // Runs the server (creates a listen, a wait anyone who wants to enter the server address)
 // with parameterss: server access port, server IP address and a message in terminal
-server.listen(port, hostname, console.log('The server is running...'));
+app.listen(port, hostname, () => {
+    console.log(`The server is running! \nAccess: http://${hostname}:${port}/`);
+});
 
 // "npm run dev" to run the server
 // "ctrl + c" to stop the server and "y" to confirm
