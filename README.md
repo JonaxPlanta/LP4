@@ -168,3 +168,29 @@ Nodemon Dev
 npm install --save-dev
 ```
 
+### Auto reset server
+
+#### Using Nodemon
+
+Change the package.json file
+
+```
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "nodemon <file-name.js>"
+},
+```
+
+Execute the following command
+
+```
+npm run dev
+```
+
+#### Using --watch
+
+Execute the following command
+
+```
+node --watch <file-name.js>
+```

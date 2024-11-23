@@ -22,3 +22,4 @@ const server = http.createServer((requisicao, resposta) => {
 server.listen(port, hostname, console.log('O servidor está rodando! \nAcesse: http://127.0.0.1:3000/'));
 
 // Para rodar: "node --watch 'server.js'"
+
