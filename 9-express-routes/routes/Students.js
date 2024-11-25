@@ -10,14 +10,14 @@ routes.get("/", (require, respost) => {
     respost.send("[GET]:STUDENT GET ROUTE");
 });
 
-// PUT Root route
-routes.put("/", (require, respost) => {
-    respost.send("[PUT]:STUDENT PUT ROUTE");
-});
-
 // POST Root route
 routes.post("/", (require, respost) => {
     respost.send("[POST]:STUDENT POST ROUTE");
+});
+
+// PUT Root route
+routes.put("/", (require, respost) => {
+    respost.send("[PUT]:STUDENT PUT ROUTE");
 });
 
 // DELETE Root route
