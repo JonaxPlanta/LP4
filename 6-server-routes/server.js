@@ -7,12 +7,12 @@ const hostname = '127.0.0.1'
 const port = 3000;
 
 // Settings of server
-const server = http.createServer((request, response) => {
+const server = http.createServer((require, response) => {
     // Settings of header
     response.writeHead(200, { "Content-type" : "text/html; charset=utf-8" });
 
-    // resquests URL from user 
-    const url = request.url;
+    // requires URL from user 
+    const url = require.url;
 
     // Manipulating URL
     if (url === "/") {

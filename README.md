@@ -168,6 +168,11 @@ Nodemon Dev
 npm install --save-dev
 ```
 
+Body Parser
+```
+npm install body-parser
+```
+
 ### Auto reset server
 
 #### Using Nodemon

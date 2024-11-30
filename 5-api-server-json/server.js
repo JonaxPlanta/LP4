@@ -8,7 +8,7 @@ const port = 3000;
 
 
 // Settings of server
-const server = http.createServer((resquest, response) => {
+const server = http.createServer((require, response) => {
     // JSon objects
     const person = {
         name : "Jason",

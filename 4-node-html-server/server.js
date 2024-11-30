@@ -10,7 +10,7 @@ const port = 3000;
 
 
 // Settings of server
-const server = http.createServer((resquest, response) => {
+const server = http.createServer((require, response) => {
     // Settings of header
     response.writeHead(200, { "Content-type" : "text/html; charset=utf-8" });
 

@@ -10,9 +10,9 @@ const hostname = '127.0.0.1'
 const port = 3000;
 
 // Anonymous function to create a server from HTTP library
-// The parameters request (when the user makes a request to the server) and
+// The parameters require (when the user makes a require to the server) and
 // response (when the server makes a response to the user) are default
-const server = http.createServer((request, response) => {
+const server = http.createServer((require, response) => {
     // Instructions to browser (statusCode and setHeader)
     // Status code must be equal 200 for everything to be fine
     response.statusCode = 200;
@@ -20,7 +20,7 @@ const server = http.createServer((request, response) => {
     response.setHeader('Content-Type', 'text/plan; charset=utf-8');
 
     // Creating a variable to query the URL string 
-    let urlQuery = url.parse(request.url, true).query;
+    let urlQuery = url.parse(require.url, true).query;
     // Creating a function to executes a sum operation
     let operator = Number(urlQuery.operator);
     let operate = Number(urlQuery.operate);

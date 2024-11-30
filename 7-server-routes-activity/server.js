@@ -10,9 +10,9 @@ const hostname = '127.0.0.1'
 const port = 3000;
 
 // Settings of server
-const server = http.createServer((request, response) => {
+const server = http.createServer((require, response) => {
     // resquests URL from user 
-    const url = request.url;
+    const url = require.url;
 
     /// JSon data
     const data = {

@@ -13,8 +13,8 @@ const teacherRoutes = require('./routes/Teachers');
 const hostname = "127.0.0.1";
 const port = 3000;
 
-app.get("/", (require, respost) => {
-    respost.send("[ROOT ROUTE]");
+app.get("/", (require, response) => {
+    response.send("[ROOT ROUTE]");
 })
 
 // Using the routes

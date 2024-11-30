@@ -6,23 +6,23 @@ const routes = express.Router();
 
 
 // GET Root route
-routes.get("/", (require, respost) => {
-    respost.send("[GET]:TEACHER GET ROUTE");
+routes.get("/", (require, response) => {
+    response.send("[GET]:TEACHER GET ROUTE");
 });
 
 // PUT Root route
-routes.put("/", (require, respost) => {
-    respost.send("[PUT]:TEACHER PUT ROUTE");
+routes.put("/", (require, response) => {
+    response.send("[PUT]:TEACHER PUT ROUTE");
 });
 
 // POST Root route
-routes.post("/", (require, respost) => {
-    respost.send("[POST]:TEACHER POST ROUTE");
+routes.post("/", (require, response) => {
+    response.send("[POST]:TEACHER POST ROUTE");
 });
 
 // DELETE Root route
-routes.delete("/", (require, respost) => {
-    respost.send("[DELETE]:TEACHER DELETE ROUTE");
+routes.delete("/", (require, response) => {
+    response.send("[DELETE]:TEACHER DELETE ROUTE");
 });
 
 // Exporting routes
