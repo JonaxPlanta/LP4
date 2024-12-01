@@ -1,1 +1,7 @@
-"./node_modules"
+2-node-http-nodemon/node_modules/
+2-node-http-nodemon/package-lock.json
+2-node-http-nodemon/package.json
+
+10-body-parser/node_modules/
+0-body-parser/package-lock.json
+10-body-parser/package.json
